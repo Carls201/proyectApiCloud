@@ -9,8 +9,8 @@ const {updatePrestamos} = require('../controllers/updatePestamoByCode');
 bookRouter.get('/', async(req, res) => {
     try{
         const response = await getBooks();
-        console.log(response)
-        // return res.status(200).json(response);
+        
+        return res.status(200).json(response);
        
     }catch(error){
         return res.status(400).json(error);
